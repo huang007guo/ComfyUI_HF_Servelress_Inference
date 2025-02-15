@@ -9,7 +9,8 @@ from model_management import get_torch_device
 import folder_paths
 
 BASE_COMFYDEPLOY_PATH = "/comfyui/models/"
-DEVICE = get_torch_device()
+DEVICE = get_torch_device().type
+#device_type = DEVICE.type  # 返回 "cuda" 或 "cpu"
 
 
 def download_hg_model(model_id:str,exDir:str=''):
